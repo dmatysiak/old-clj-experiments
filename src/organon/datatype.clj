@@ -1,6 +1,6 @@
 (ns organon.datatype
   "Data type library."
-  (import 'organon.Interop))
+  (:import (organon.Interop)))
 
 (def data-types 
   "Data type storage."
@@ -24,7 +24,7 @@
     (if dt-genus
       (if (= dt-genus genus)
         true
-        (recur (dtgenus @data-types))))))
+        (recur (dt-genus @data-types))))))
 
 (defn convert
   "Coverts given datum to the indicated type, if possible."
@@ -40,11 +40,3 @@
     `(fn [~datumvar] 
        (let [~valuevar (:value ~datumvar)]
          (do ~@body)))))
-
-(def -main
-  [&args]
-  (let [t (.organon.Interop)]
-    (do 
-      (println "Getting sum: "(.getSum t))
-      (.setNums 1 3)
-      (println "Getting sum: "(.getSum t)))))

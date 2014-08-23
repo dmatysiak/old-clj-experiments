@@ -1,13 +1,16 @@
-class Interop {
-    int a = 0;
-    int b = 0;
+package organon.java;
 
-    int getSum() {
+public class Interop {
+    long a = 0L;
+    long b = 0L;
+    
+    public long getSum() {
         return this.a + this.b;
     }
-
-    void setNums(int a, int b) {
+    
+    public void setNums(long a, long b) {
         this.a = a;
         this.b = b;
     }
 }
+
