@@ -1,11 +1,9 @@
 (defproject organon "0.1.0-SNAPSHOT"
-  :description "A collection of my Clojure tools."
+  :description "??"
   :url "http://github.com/dmatysiak/organon.git"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.6.0"]
-                 [org.clojure/tools.trace "0.7.8"]
-                 [org.clojure/math.combinatorics "0.0.8"]]
+  :dependencies [[org.clojure/clojure "1.8.0"]]
   :java-source-paths ["src/organon/java"]
   :main ^:skip-aot organon.core
   :target-path "target/%s")
